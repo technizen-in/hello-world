@@ -1,909 +1,1328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Technizen Solutions | Digital Solutions</title>
-
-    <style>
-
-        /* =========================
-           BASIC SETTINGS
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #172033;
-            background: #ffffff;
-            line-height: 1.6;
-        }
 
-        a {
-            text-decoration: none;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chilverton Cottages & Day Spa | Ravenshoe, Queensland</title>
+
+<meta name="description"
+content="A beautiful sample website concept for Chilverton Cottages & Day Spa. Accommodation, relaxation, nature and wellness in the Atherton Tablelands.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#243126;
+    background:#fff;
+    line-height:1.6;
+}
 
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    height:78px;
 
-        /* =========================
-           HEADER
-        ========================= */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-        header {
-            height: 75px;
-            padding: 0 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    padding:0 6%;
 
-            background: rgba(255,255,255,0.96);
+    background:rgba(255,255,255,.96);
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+    border-bottom:1px solid #e8ebe7;
+
+    backdrop-filter:blur(10px);
+}
 
-            border-bottom: 1px solid #eeeeee;
-        }
+.logo{
+    font-family:Georgia,serif;
+    font-size:23px;
+    font-weight:bold;
+    color:#314b37;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            color: #111827;
-        }
+.logo span{
+    display:block;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:3px;
+    color:#8a7154;
+    margin-top:-2px;
+}
 
-        .logo span {
-            color: #1769ff;
-        }
+nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
 
-        nav {
-            display: flex;
-            gap: 30px;
-        }
+nav a{
+    font-size:14px;
+    color:#4c584e;
+}
 
-        nav a {
-            color: #4b5563;
-            font-size: 14px;
-            font-weight: 500;
-        }
+nav a:hover{
+    color:#8a7154;
+}
 
-        nav a:hover {
-            color: #1769ff;
-        }
+.header-button{
+    background:#314b37;
+    color:#fff;
+    padding:11px 19px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:bold;
+}
 
-        .nav-button {
-            background: #1769ff;
-            color: white;
-            padding: 11px 20px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-        }
+.header-button:hover{
+    background:#243a29;
+}
 
-        .nav-button:hover {
-            background: #0b55d6;
-        }
 
+/* =========================
+   HERO
+========================= */
 
-        /* =========================
-           HERO
-        ========================= */
+.hero{
+    min-height:680px;
 
-        .hero {
-            min-height: 620px;
+    display:flex;
+    align-items:center;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    padding:80px 6%;
 
-            padding: 80px 7%;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(21,38,26,.86) 0%,
+        rgba(21,38,26,.58) 48%,
+        rgba(21,38,26,.10) 100%
+    ),
+    url("https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1800&q=90");
 
-            background:
-                linear-gradient(120deg,
-                #f5f9ff 0%,
-                #ffffff 60%);
-        }
+    background-size:cover;
+    background-position:center;
+}
 
-        .hero-text {
-            width: 52%;
-        }
+.hero-content{
+    max-width:680px;
+    color:white;
+}
 
-        .tag {
-            display: inline-block;
+.eyebrow{
+    display:inline-block;
 
-            background: #eaf2ff;
-            color: #1769ff;
+    padding:7px 13px;
 
-            padding: 7px 14px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:30px;
 
-            border-radius: 30px;
+    font-size:11px;
+    font-weight:bold;
 
-            font-size: 12px;
-            font-weight: 700;
+    letter-spacing:2px;
 
-            letter-spacing: 1px;
+    margin-bottom:22px;
+}
 
-            margin-bottom: 22px;
-        }
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:64px;
+    line-height:1.05;
+    font-weight:500;
+    margin-bottom:24px;
+}
 
-        .hero h1 {
-            font-size: 58px;
-            line-height: 1.08;
+.hero p{
+    max-width:580px;
 
-            letter-spacing: -2px;
+    font-size:18px;
 
-            margin-bottom: 25px;
-        }
+    color:rgba(255,255,255,.9);
 
-        .hero h1 span {
-            color: #1769ff;
-        }
+    margin-bottom:32px;
+}
 
-        .hero p {
-            max-width: 600px;
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
 
-            font-size: 17px;
-            color: #687386;
+.btn{
+    display:inline-block;
 
-            margin-bottom: 35px;
-        }
+    padding:14px 24px;
 
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
+    border-radius:5px;
 
-        .primary {
-            display: inline-block;
+    font-size:13px;
+    font-weight:bold;
+}
 
-            background: #1769ff;
-            color: white;
+.btn-primary{
+    background:#c8a47a;
+    color:white;
+}
 
-            padding: 14px 25px;
+.btn-primary:hover{
+    background:#b28b60;
+}
 
-            border-radius: 6px;
+.btn-light{
+    background:white;
+    color:#314b37;
+}
 
-            font-size: 14px;
-            font-weight: 600;
-        }
+.btn-light:hover{
+    background:#f1f1f1;
+}
 
-        .primary:hover {
-            background: #0b55d6;
-        }
 
-        .secondary {
-            display: inline-block;
+/* =========================
+   QUICK INFO
+========================= */
 
-            border: 1px solid #d8dee9;
+.quick-info{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 
-            color: #273247;
+    margin:-45px 6% 0;
 
-            padding: 13px 25px;
+    position:relative;
+    z-index:10;
 
-            border-radius: 6px;
+    background:white;
 
-            font-size: 14px;
-            font-weight: 600;
-        }
+    box-shadow:0 15px 45px rgba(0,0,0,.10);
+}
 
-        .secondary:hover {
-            border-color: #1769ff;
-            color: #1769ff;
-        }
+.quick-item{
+    padding:28px 25px;
 
+    text-align:center;
 
-        /* HERO VISUAL */
+    border-right:1px solid #e7e7e7;
+}
 
-        .hero-visual {
-            width: 42%;
-            position: relative;
-        }
+.quick-item:last-child{
+    border-right:none;
+}
 
-        .hero-image {
-            width: 100%;
-            height: 430px;
+.quick-icon{
+    font-size:25px;
+    margin-bottom:8px;
+}
 
-            object-fit: cover;
+.quick-item strong{
+    display:block;
+    font-size:14px;
+    color:#314b37;
+}
 
-            border-radius: 18px;
+.quick-item span{
+    font-size:12px;
+    color:#7a827b;
+}
 
-            box-shadow:
-                0 25px 60px rgba(24, 67, 130, 0.18);
-        }
 
-        .floating-card {
-            position: absolute;
+/* =========================
+   SECTIONS
+========================= */
 
-            bottom: 30px;
-            left: -35px;
+.section{
+    padding:100px 6%;
+}
 
-            background: white;
+.section-label{
+    color:#9a7650;
 
-            padding: 18px 22px;
+    font-size:11px;
+    font-weight:bold;
 
-            border-radius: 10px;
+    letter-spacing:2px;
 
-            box-shadow:
-                0 15px 40px rgba(0,0,0,0.12);
+    margin-bottom:12px;
+}
 
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+.section-title{
+    font-family:Georgia,serif;
 
-        .floating-icon {
-            width: 42px;
-            height: 42px;
+    font-size:45px;
 
-            background: #eaf2ff;
+    line-height:1.15;
 
-            border-radius: 8px;
+    color:#26372b;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    margin-bottom:18px;
+}
 
-            color: #1769ff;
-            font-size: 20px;
-        }
+.section-title span{
+    color:#8a7154;
+}
 
-        .floating-card strong {
-            display: block;
-            font-size: 14px;
-        }
+.section-text{
+    color:#707970;
+    max-width:680px;
+}
 
-        .floating-card small {
-            color: #7a8495;
-        }
 
+/* =========================
+   ABOUT
+========================= */
 
-        /* =========================
-           CLIENT STRIP
-        ========================= */
+.about{
+    display:grid;
 
-        .client-strip {
-            padding: 30px 7%;
+    grid-template-columns:1fr 1fr;
 
-            border-top: 1px solid #eeeeee;
-            border-bottom: 1px solid #eeeeee;
+    gap:75px;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    align-items:center;
+}
 
-            color: #8a94a6;
-        }
+.about-image{
+    position:relative;
+}
 
-        .client-strip strong {
-            color: #555f70;
-            font-size: 13px;
-        }
+.about-image img{
+    height:500px;
 
-        .client-names {
-            display: flex;
-            gap: 45px;
+    object-fit:cover;
 
-            font-size: 13px;
-            font-weight: 700;
+    border-radius:4px;
+}
 
-            letter-spacing: 1px;
-        }
+.image-note{
+    position:absolute;
 
+    right:-25px;
+    bottom:25px;
 
-        /* =========================
-           SECTION
-        ========================= */
+    background:#314b37;
 
-        .section {
-            padding: 100px 7%;
-        }
+    color:white;
 
-        .section-heading {
-            max-width: 650px;
-            margin-bottom: 55px;
-        }
+    padding:20px 24px;
 
-        .section-heading.center {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    font-family:Georgia,serif;
 
-        .section-label {
-            color: #1769ff;
+    font-size:18px;
+}
 
-            font-size: 12px;
-            font-weight: 700;
+.about-content p{
+    margin-bottom:18px;
+    color:#6f786f;
+}
 
-            letter-spacing: 1.5px;
+.check-list{
+    margin:28px 0;
+}
 
-            margin-bottom: 12px;
-        }
+.check{
+    margin-bottom:12px;
 
-        .section-heading h2 {
-            font-size: 40px;
-            line-height: 1.15;
+    font-size:14px;
+    font-weight:bold;
 
-            letter-spacing: -1px;
+    color:#465249;
+}
 
-            margin-bottom: 18px;
-        }
+.check span{
+    display:inline-flex;
 
-        .section-heading h2 span {
-            color: #1769ff;
-        }
+    width:23px;
+    height:23px;
 
-        .section-heading p {
-            color: #6c7687;
-        }
+    align-items:center;
+    justify-content:center;
 
+    border-radius:50%;
 
-        /* =========================
-           SERVICES
-        ========================= */
+    background:#edf2ed;
 
-        .services {
-            display: grid;
+    color:#314b37;
 
-            grid-template-columns: repeat(3, 1fr);
+    margin-right:8px;
+}
 
-            gap: 22px;
-        }
 
-        .service {
-            padding: 32px;
+/* =========================
+   ACCOMMODATION
+========================= */
 
-            border: 1px solid #e9edf3;
+.accommodation{
+    background:#f6f6f2;
+}
 
-            border-radius: 10px;
+.center{
+    text-align:center;
+}
 
-            background: white;
+.center .section-text{
+    margin:auto;
+}
 
-            transition: 0.3s;
-        }
+.cards{
+    display:grid;
 
-        .service:hover {
-            transform: translateY(-6px);
+    grid-template-columns:repeat(3,1fr);
 
-            box-shadow:
-                0 15px 40px rgba(23,105,255,0.10);
+    gap:25px;
 
-            border-color: #d9e6ff;
-        }
+    margin-top:50px;
+}
 
-        .service-icon {
-            width: 52px;
-            height: 52px;
+.card{
+    background:white;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border:1px solid #e6e8e4;
 
-            background: #edf4ff;
+    overflow:hidden;
 
-            color: #1769ff;
+    transition:.3s;
+}
 
-            border-radius: 10px;
+.card:hover{
+    transform:translateY(-7px);
 
-            font-size: 23px;
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+}
 
-            margin-bottom: 22px;
-        }
+.card-image{
+    height:240px;
+    object-fit:cover;
+}
 
-        .service h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+.card-content{
+    padding:25px;
+}
 
-        .service p {
-            color: #737d8e;
-            font-size: 14px;
+.card-tag{
+    color:#9a7650;
 
-            margin-bottom: 18px;
-        }
+    font-size:10px;
+    font-weight:bold;
 
-        .service a {
-            color: #1769ff;
-            font-size: 13px;
-            font-weight: 700;
-        }
+    letter-spacing:1.5px;
+}
 
+.card h3{
+    font-family:Georgia,serif;
 
-        /* =========================
-           ABOUT
-        ========================= */
+    font-size:24px;
 
-        .about {
-            background: #f6f9fd;
+    color:#314b37;
 
-            display: flex;
-            align-items: center;
-            gap: 80px;
-        }
+    margin:8px 0 10px;
+}
 
-        .about-image {
-            width: 48%;
-        }
+.card p{
+    color:#747c74;
 
-        .about-image img {
-            width: 100%;
-            height: 430px;
+    font-size:14px;
 
-            object-fit: cover;
+    margin-bottom:18px;
+}
 
-            border-radius: 15px;
-        }
+.card-link{
+    color:#314b37;
 
-        .about-content {
-            width: 52%;
-        }
+    font-size:13px;
 
-        .about-content h2 {
-            font-size: 40px;
-            line-height: 1.2;
+    font-weight:bold;
+}
 
-            margin-bottom: 22px;
-        }
 
-        .about-content h2 span {
-            color: #1769ff;
-        }
+/* =========================
+   EXPERIENCE
+========================= */
 
-        .about-content p {
-            color: #687386;
-            margin-bottom: 18px;
-        }
+.experience{
+    display:grid;
 
-        .check-list {
-            margin: 25px 0;
-        }
+    grid-template-columns:repeat(3,1fr);
 
-        .check-list div {
-            margin-bottom: 12px;
+    gap:20px;
 
-            font-size: 14px;
-            font-weight: 600;
-        }
+    margin-top:50px;
+}
 
-        .check-list span {
-            color: #1769ff;
-            margin-right: 8px;
-        }
+.experience-card{
+    min-height:250px;
 
+    padding:30px;
 
-        /* =========================
-           WORK
-        ========================= */
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
 
-        .work {
-            display: grid;
+    color:white;
 
-            grid-template-columns: repeat(3, 1fr);
+    background-size:cover;
+    background-position:center;
 
-            gap: 22px;
-        }
+    position:relative;
 
-        .work-card {
-            overflow: hidden;
+    overflow:hidden;
+}
 
-            border-radius: 12px;
+.experience-card::before{
+    content:"";
 
-            border: 1px solid #e7ebf1;
+    position:absolute;
+    inset:0;
 
-            background: white;
-        }
+    background:linear-gradient(
+        transparent 20%,
+        rgba(0,0,0,.75)
+    );
+}
 
-        .work-card img {
-            width: 100%;
-            height: 230px;
+.experience-content{
+    position:relative;
+    z-index:2;
+}
 
-            object-fit: cover;
+.experience h3{
+    font-family:Georgia,serif;
 
-            transition: 0.4s;
-        }
+    font-size:25px;
 
-        .work-card:hover img {
-            transform: scale(1.04);
-        }
+    margin-bottom:5px;
+}
 
-        .work-info {
-            padding: 22px;
-        }
+.experience p{
+    font-size:13px;
+    opacity:.9;
+}
 
-        .work-info small {
-            color: #1769ff;
+.experience-1{
+    background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=85");
+}
 
-            font-size: 11px;
-            font-weight: 700;
+.experience-2{
+    background-image:url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=85");
+}
 
-            letter-spacing: 1px;
-        }
+.experience-3{
+    background-image:url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85");
+}
 
-        .work-info h3 {
-            margin-top: 7px;
-            font-size: 18px;
-        }
 
+/* =========================
+   BENEFITS / WEBSITE OFFER
+========================= */
 
-        /* =========================
-           CTA
-        ========================= */
+.website-offer{
+    background:#17261b;
 
-        .cta {
-            margin: 0 7% 100px;
+    color:white;
 
-            padding: 65px;
+    padding:90px 6%;
+}
 
-            border-radius: 15px;
+.offer-grid{
+    display:grid;
 
-            background:
-                linear-gradient(
-                    120deg,
-                    #1769ff,
-                    #0847b9
-                );
+    grid-template-columns:1.1fr .9fr;
 
-            color: white;
+    gap:70px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    align-items:center;
+}
 
-        .cta h2 {
-            font-size: 36px;
-            line-height: 1.2;
+.offer-label{
+    color:#d0a878;
 
-            margin-bottom: 10px;
-        }
+    font-size:12px;
+    font-weight:bold;
 
-        .cta p {
-            opacity: 0.85;
-        }
+    letter-spacing:2px;
 
-        .white-button {
-            background: white;
+    margin-bottom:15px;
+}
 
-            color: #1769ff;
+.offer-title{
+    font-family:Georgia,serif;
 
-            padding: 14px 24px;
+    font-size:48px;
 
-            border-radius: 6px;
+    line-height:1.1;
 
-            font-size: 14px;
-            font-weight: 700;
+    margin-bottom:20px;
+}
 
-            white-space: nowrap;
-        }
+.offer-title span{
+    color:#d4ae7c;
+}
 
+.offer-text{
+    color:#c4cbc5;
 
-        /* =========================
-           CONTACT
-        ========================= */
+    max-width:650px;
 
-        .contact {
-            background: #f7f9fc;
-        }
+    margin-bottom:25px;
+}
 
-        .contact-box {
-            display: grid;
+.price-box{
+    background:white;
 
-            grid-template-columns: 1fr 1fr;
+    color:#26372b;
 
-            gap: 50px;
-        }
+    padding:35px;
 
-        .contact-details h3 {
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
+    border-radius:7px;
 
-        .contact-details p {
-            color: #6d7788;
-            margin-bottom: 15px;
-        }
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
+.price-small{
+    font-size:12px;
+    color:#69736b;
+}
 
-        input,
-        textarea {
-            width: 100%;
+.price{
+    font-size:58px;
 
-            padding: 14px 16px;
+    font-weight:800;
 
-            border: 1px solid #dce2eb;
+    color:#314b37;
 
-            border-radius: 6px;
+    line-height:1.1;
 
-            font-family: inherit;
+    margin:8px 0;
+}
 
-            outline: none;
-        }
+.price span{
+    font-size:18px;
+    font-weight:normal;
+}
 
-        input:focus,
-        textarea:focus {
-            border-color: #1769ff;
-        }
+.renewal{
+    display:inline-block;
 
-        textarea {
-            resize: vertical;
-        }
+    background:#f0e7da;
 
-        form button {
-            border: none;
+    color:#805f3c;
 
-            background: #1769ff;
+    padding:7px 11px;
 
-            color: white;
+    border-radius:4px;
 
-            padding: 14px;
+    font-size:12px;
 
-            border-radius: 6px;
+    font-weight:bold;
 
-            cursor: pointer;
+    margin-bottom:20px;
+}
 
-            font-weight: 600;
-        }
+.price-box p{
+    color:#69736b;
 
-        form button:hover {
-            background: #0b55d6;
-        }
+    font-size:13px;
 
+    margin-bottom:20px;
+}
 
-        /* =========================
-           FOOTER
-        ========================= */
+.price-button{
+    display:block;
 
-        footer {
-            background: #111827;
+    text-align:center;
 
-            color: #aab2c0;
+    background:#314b37;
 
-            padding: 50px 7% 25px;
-        }
+    color:white;
 
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
+    padding:14px;
 
-            padding-bottom: 35px;
+    border-radius:5px;
 
-            border-bottom: 1px solid #293142;
-        }
+    font-weight:bold;
 
-        .footer-logo {
-            font-size: 24px;
-            font-weight: 800;
+    font-size:13px;
+}
 
-            color: white;
-        }
+.price-button:hover{
+    background:#223a28;
+}
 
-        .footer-logo span {
-            color: #4b8dff;
-        }
 
-        .footer-links {
-            display: flex;
-            gap: 25px;
-        }
+/* =========================
+   WEBSITE BENEFITS
+========================= */
 
-        .footer-links a {
-            color: #aab2c0;
-            font-size: 13px;
-        }
+.benefits{
+    display:grid;
 
-        .footer-links a:hover {
-            color: white;
-        }
+    grid-template-columns:repeat(3,1fr);
 
-        .copyright {
-            text-align: center;
+    gap:20px;
 
-            padding-top: 25px;
+    margin-top:45px;
+}
 
-            font-size: 12px;
-        }
+.benefit{
+    padding:25px;
 
+    background:rgba(255,255,255,.06);
 
-        /* =========================
-           MOBILE
-        ========================= */
+    border:1px solid rgba(255,255,255,.1);
 
-        @media (max-width: 900px) {
+    border-radius:6px;
+}
 
-            header {
-                padding: 0 5%;
-            }
+.benefit-icon{
+    font-size:25px;
+    margin-bottom:12px;
+}
 
-            nav {
-                display: none;
-            }
+.benefit h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
 
-            .hero {
-                flex-direction: column;
+.benefit p{
+    color:#adb8af;
 
-                padding: 70px 5%;
+    font-size:13px;
+}
 
-                text-align: center;
-            }
 
-            .hero-text,
-            .hero-visual {
-                width: 100%;
-            }
+/* =========================
+   SECOND PROMO
+========================= */
 
-            .hero h1 {
-                font-size: 42px;
-            }
+.promo{
+    margin:0 6%;
 
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
+    padding:55px;
 
-            .hero-buttons {
-                justify-content: center;
-            }
+    background:#f3eee7;
 
-            .hero-visual {
-                margin-top: 55px;
-            }
+    display:flex;
 
-            .floating-card {
-                left: 10px;
-            }
+    align-items:center;
 
-            .client-strip {
-                display: none;
-            }
+    justify-content:space-between;
 
-            .services {
-                grid-template-columns: 1fr;
-            }
+    gap:30px;
 
-            .about {
-                flex-direction: column;
-                gap: 40px;
-            }
+    border-left:5px solid #b18a60;
+}
 
-            .about-image,
-            .about-content {
-                width: 100%;
-            }
+.promo h2{
+    font-family:Georgia,serif;
 
-            .work {
-                grid-template-columns: 1fr;
-            }
+    color:#314b37;
 
-            .cta {
-                margin: 0 5% 70px;
+    font-size:35px;
 
-                padding: 40px 25px;
+    margin-bottom:8px;
+}
 
-                flex-direction: column;
+.promo p{
+    color:#6d756e;
 
-                align-items: flex-start;
+    max-width:700px;
 
-                gap: 25px;
-            }
+    font-size:14px;
+}
 
-            .cta h2 {
-                font-size: 30px;
-            }
+.promo-button{
+    flex-shrink:0;
 
-            .contact-box {
-                grid-template-columns: 1fr;
-            }
+    background:#314b37;
 
-            .footer-top {
-                flex-direction: column;
-                gap: 25px;
-            }
+    color:white;
 
-            .footer-links {
-                flex-wrap: wrap;
-            }
+    padding:14px 24px;
 
-        }
+    border-radius:5px;
 
-    </style>
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-rows:220px 220px;
+
+    gap:10px;
+
+    margin-top:45px;
+}
+
+.gallery img{
+    height:100%;
+
+    object-fit:cover;
+}
+
+.gallery img:first-child{
+    grid-row:span 2;
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials{
+    background:#f7f7f4;
+}
+
+.testimonial-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+    margin-top:45px;
+}
+
+.testimonial{
+    background:white;
+
+    padding:30px;
+
+    border:1px solid #e5e7e3;
+}
+
+.stars{
+    color:#b48a5a;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.testimonial p{
+    color:#646d65;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+}
+
+.testimonial strong{
+    color:#314b37;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.location-box{
+    background:#f4f5f1;
+
+    padding:35px;
+}
+
+.location-box h3{
+    font-family:Georgia,serif;
+
+    font-size:28px;
+
+    color:#314b37;
+
+    margin-bottom:18px;
+}
+
+.location-row{
+    display:flex;
+
+    gap:13px;
+
+    margin-bottom:15px;
+
+    color:#687168;
+
+    font-size:14px;
+}
+
+.map{
+    width:100%;
+
+    height:390px;
+
+    border:0;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#314b37;
+
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+}
+
+.contact .section-label{
+    color:#d2ad7d;
+}
+
+.contact .section-title{
+    color:white;
+}
+
+.contact .section-text{
+    color:#c8d0c9;
+}
+
+.contact-details{
+    margin-top:30px;
+}
+
+.contact-row{
+    margin-bottom:15px;
+
+    color:#d1d8d2;
+
+    font-size:14px;
+}
+
+.contact-form{
+    background:white;
+
+    padding:30px;
+
+    border-radius:5px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:13px 14px;
+
+    margin-bottom:12px;
+
+    border:1px solid #dde1dd;
+
+    outline:none;
+
+    border-radius:4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#8a7154;
+}
+
+.contact-form button{
+    width:100%;
+
+    border:0;
+
+    padding:14px;
+
+    background:#b28a5d;
+
+    color:white;
+
+    font-weight:bold;
+
+    border-radius:4px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111a14;
+
+    color:#aeb7b0;
+
+    padding:40px 6% 20px;
+}
+
+.footer-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding-bottom:30px;
+
+    border-bottom:1px solid #29332c;
+}
+
+.footer-logo{
+    font-family:Georgia,serif;
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.footer-links{
+    display:flex;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    font-size:12px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    text-align:center;
+
+    padding-top:20px;
+
+    font-size:11px;
+
+    color:#79837b;
+}
+
+.footer-bottom strong{
+    color:#b28a5d;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:22px;
+    bottom:22px;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:13px 18px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.whatsapp:hover{
+    background:#1ebe5d;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    header{
+        padding:0 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:650px;
+
+        padding:70px 5%;
+
+        background-position:center;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .quick-info{
+        grid-template-columns:repeat(2,1fr);
+
+        margin:0;
+    }
+
+    .quick-item:nth-child(2){
+        border-right:none;
+    }
+
+    .about,
+    .offer-grid,
+    .location,
+    .contact-grid{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .cards,
+    .experience,
+    .benefits,
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:75px 5%;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .offer-title{
+        font-size:38px;
+    }
+
+    .promo{
+        margin:0 5%;
+
+        padding:35px 25px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+
+        grid-template-rows:200px 200px 200px;
+    }
+
+    .gallery img:first-child{
+        grid-column:span 2;
+
+        grid-row:auto;
+    }
+
+    .footer-top{
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .quick-info{
+        grid-template-columns:1fr;
+    }
+
+    .quick-item{
+        border-right:none;
+        border-bottom:1px solid #e7e7e7;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .about-image img{
+        height:350px;
+    }
+
+    .image-note{
+        right:10px;
+    }
+
+    .price{
+        font-size:48px;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+
+        padding:12px 16px;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-    <div class="logo">
-        <span>TECH</span>IZEN
-    </div>
+    <a href="#home" class="logo">
+
+        CHILVERTON
+
+        <span>COTTAGES & DAY SPA</span>
+
+    </a>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
+
         <a href="#about">About</a>
-        <a href="#work">Our Work</a>
+
+        <a href="#stay">Stay</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#reviews">Reviews</a>
+
         <a href="#contact">Contact</a>
+
     </nav>
 
-    <a href="#contact" class="nav-button">
-        Get Started
+    <a href="#contact" class="header-button">
+        BOOK / ENQUIRE
     </a>
 
 </header>
 
 
-
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-text">
+    <div class="hero-content">
 
-        <div class="tag">
-            DIGITAL SOLUTIONS
+        <div class="eyebrow">
+            RAVENSHOE · ATHERTON TABLELANDS
         </div>
 
         <h1>
-            Technology That
-            <span>Moves</span>
-            Your Business Forward.
+            Escape to Nature.
+            Stay. Relax. Reconnect.
         </h1>
 
         <p>
-            We create modern websites, software, mobile
-            applications and digital solutions that help
-            businesses grow in a connected world.
+            A peaceful accommodation and day spa experience
+            surrounded by nature, rainforest and the beautiful
+            Millstream River.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#services" class="primary">
-                Explore Services
+            <a href="#contact" class="btn btn-primary">
+                CHECK AVAILABILITY →
             </a>
 
-            <a href="#contact" class="secondary">
-                Let's Talk →
+            <a href="#stay" class="btn btn-light">
+                EXPLORE YOUR STAY
             </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-visual">
-
-        <img
-            class="hero-image"
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85"
-            alt="Technology team">
-
-        <div class="floating-card">
-
-            <div class="floating-icon">
-                ✓
-            </div>
-
-            <div>
-                <strong>Digital Growth</strong>
-                <small>Built for your business</small>
-            </div>
 
         </div>
 
@@ -912,166 +1331,133 @@
 </section>
 
 
+<!-- =========================
+     QUICK INFO
+========================= -->
 
-<!-- ================= CLIENT STRIP ================= -->
+<div class="quick-info">
 
-<div class="client-strip">
+    <div class="quick-item">
 
-    <strong>OUR EXPERTISE</strong>
+        <div class="quick-icon">🌿</div>
 
-    <div class="client-names">
-        <span>WEB</span>
-        <span>SOFTWARE</span>
-        <span>MOBILE</span>
-        <span>DESIGN</span>
-        <span>MARKETING</span>
+        <strong>Nature Retreat</strong>
+
+        <span>Peaceful surroundings</span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+        <div class="quick-icon">🛏️</div>
+
+        <strong>Private Accommodation</strong>
+
+        <span>Comfortable stays</span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+        <div class="quick-icon">💆</div>
+
+        <strong>Day Spa</strong>
+
+        <span>Relax & recharge</span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+        <div class="quick-icon">🐾</div>
+
+        <strong>Pet Friendly</strong>
+
+        <span>Bring your companions</span>
+
     </div>
 
 </div>
 
 
+<!-- =========================
+     ABOUT
+========================= -->
 
-<!-- ================= SERVICES ================= -->
+<section class="section" id="about">
 
-<section class="section" id="services">
+    <div class="about">
 
-    <div class="section-heading center">
+        <div class="about-image">
 
-        <div class="section-label">
-            OUR SERVICES
-        </div>
+            <img
+            src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=90"
+            alt="Nature accommodation">
 
-        <h2>
-            Everything You Need
-            <span>To Go Digital</span>
-        </h2>
-
-        <p>
-            From idea to execution, we provide practical
-            technology solutions designed around your business.
-        </p>
-
-    </div>
-
-
-    <div class="services">
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                💻
+            <div class="image-note">
+                Your peaceful escape
             </div>
-
-            <h3>Website Development</h3>
-
-            <p>
-                Fast, modern and responsive websites
-                designed to turn visitors into customers.
-            </p>
-
-            <a href="#contact">
-                Learn More →
-            </a>
 
         </div>
 
 
-        <div class="service">
+        <div class="about-content">
 
-            <div class="service-icon">
-                ⚙️
+            <div class="section-label">
+                WELCOME TO CHILVERTON
             </div>
 
-            <h3>Software Development</h3>
+            <h2 class="section-title">
+
+                More Than A Stay.
+                <span>It's An Experience.</span>
+
+            </h2>
 
             <p>
-                Custom software solutions built around
-                your unique business requirements.
+                Discover a tranquil retreat surrounded by the natural
+                beauty of the Atherton Tablelands. Enjoy comfortable
+                accommodation, peaceful surroundings and relaxing
+                wellness experiences.
             </p>
 
-            <a href="#contact">
-                Learn More →
-            </a>
+            <p>
+                Whether you're looking for a romantic getaway, a
+                relaxing weekend or time to reconnect with nature,
+                your stay can be tailored around you.
+            </p>
 
-        </div>
 
+            <div class="check-list">
 
-        <div class="service">
+                <div class="check">
+                    <span>✓</span>
+                    Peaceful natural surroundings
+                </div>
 
-            <div class="service-icon">
-                📱
+                <div class="check">
+                    <span>✓</span>
+                    Private and comfortable accommodation
+                </div>
+
+                <div class="check">
+                    <span>✓</span>
+                    On-site spa and massage experiences
+                </div>
+
+                <div class="check">
+                    <span>✓</span>
+                    Pet-friendly options
+                </div>
+
             </div>
 
-            <h3>Mobile Applications</h3>
 
-            <p>
-                Simple and powerful mobile applications
-                for modern businesses.
-            </p>
-
-            <a href="#contact">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                🛒
-            </div>
-
-            <h3>E-Commerce</h3>
-
-            <p>
-                Build your online store and start reaching
-                customers beyond your local market.
-            </p>
-
-            <a href="#contact">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📈
-            </div>
-
-            <h3>Digital Marketing</h3>
-
-            <p>
-                SEO and digital marketing strategies
-                designed to increase your online visibility.
-            </p>
-
-            <a href="#contact">
-                Learn More →
-            </a>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                🎨
-            </div>
-
-            <h3>UI / UX Design</h3>
-
-            <p>
-                Clean and intuitive interfaces that
-                create better customer experiences.
-            </p>
-
-            <a href="#contact">
-                Learn More →
+            <a href="#contact" class="btn btn-primary">
+                PLAN YOUR STAY →
             </a>
 
         </div>
@@ -1081,149 +1467,122 @@
 </section>
 
 
+<!-- =========================
+     ACCOMMODATION
+========================= -->
 
-<!-- ================= ABOUT ================= -->
+<section class="section accommodation" id="stay">
 
-<section class="section about" id="about">
-
-    <div class="about-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
-            alt="Business team">
-
-    </div>
-
-
-    <div class="about-content">
+    <div class="center">
 
         <div class="section-label">
-            ABOUT TECHNIZEN
+            YOUR STAY
         </div>
 
-        <h2>
-            We Turn Ideas Into
-            <span>Digital Experiences.</span>
+        <h2 class="section-title">
+            Find Your
+            <span>Perfect Escape</span>
         </h2>
 
-        <p>
-            Technology should make business easier, not more
-            complicated. We help businesses use technology
-            to connect with customers and grow.
-        </p>
-
-        <p>
-            Our approach combines technology, creativity
-            and business understanding to build solutions
-            that are practical and effective.
-        </p>
-
-
-        <div class="check-list">
-
-            <div>
-                <span>✓</span>
-                Modern technology
-            </div>
-
-            <div>
-                <span>✓</span>
-                Responsive design
-            </div>
-
-            <div>
-                <span>✓</span>
-                Business-focused solutions
-            </div>
-
-            <div>
-                <span>✓</span>
-                Dedicated support
-            </div>
-
-        </div>
-
-
-        <a href="#contact" class="primary">
-            Work With Us
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= WORK ================= -->
-
-<section class="section" id="work">
-
-    <div class="section-heading center">
-
-        <div class="section-label">
-            OUR WORK
-        </div>
-
-        <h2>
-            Ideas Into
-            <span>Reality</span>
-        </h2>
-
-        <p>
-            Some examples of digital solutions we can build.
+        <p class="section-text">
+            A website can make it easy for your guests to explore
+            accommodation options, compare features and enquire
+            directly from their phone or computer.
         </p>
 
     </div>
 
 
-    <div class="work">
+    <div class="cards">
 
 
-        <div class="work-card">
+        <div class="card">
 
             <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
-                alt="Business dashboard">
+            class="card-image"
+            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=85"
+            alt="Private cottage">
 
-            <div class="work-info">
+            <div class="card-content">
 
-                <small>WEB DEVELOPMENT</small>
+                <div class="card-tag">
+                    ACCOMMODATION
+                </div>
 
-                <h3>Business Dashboard</h3>
+                <h3>
+                    Private Cottages
+                </h3>
+
+                <p>
+                    A comfortable private retreat designed for
+                    couples and guests looking for peace and privacy.
+                </p>
+
+                <a href="#contact" class="card-link">
+                    ENQUIRE NOW →
+                </a>
 
             </div>
 
         </div>
 
 
-        <div class="work-card">
+        <div class="card">
 
             <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1000&q=85"
-                alt="Mobile application">
+            class="card-image"
+            src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=85"
+            alt="Comfortable accommodation">
 
-            <div class="work-info">
+            <div class="card-content">
 
-                <small>MOBILE APPLICATION</small>
+                <div class="card-tag">
+                    RELAX & UNWIND
+                </div>
 
-                <h3>Mobile Experience</h3>
+                <h3>
+                    Comfortable Spaces
+                </h3>
+
+                <p>
+                    Enjoy a relaxing environment with thoughtful
+                    facilities for a memorable getaway.
+                </p>
+
+                <a href="#contact" class="card-link">
+                    DISCOVER MORE →
+                </a>
 
             </div>
 
         </div>
 
 
-        <div class="work-card">
+        <div class="card">
 
             <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
-                alt="Online store">
+            class="card-image"
+            src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1000&q=85"
+            alt="Luxury accommodation">
 
-            <div class="work-info">
+            <div class="card-content">
 
-                <small>E-COMMERCE</small>
+                <div class="card-tag">
+                    SPECIAL GETAWAY
+                </div>
 
-                <h3>Online Store</h3>
+                <h3>
+                    Couples Escape
+                </h3>
+
+                <p>
+                    Combine accommodation, relaxation and spa
+                    experiences for a special occasion.
+                </p>
+
+                <a href="#contact" class="card-link">
+                    PLAN YOUR ESCAPE →
+                </a>
 
             </div>
 
@@ -1235,125 +1594,659 @@
 </section>
 
 
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-<!-- ================= CTA ================= -->
+<section class="section" id="experience">
 
-<section class="cta">
+    <div class="center">
+
+        <div class="section-label">
+            EXPERIENCES
+        </div>
+
+        <h2 class="section-title">
+            Relax. Explore.
+            <span>Reconnect.</span>
+        </h2>
+
+        <p class="section-text">
+            A modern business website can showcase every part of
+            what makes your business special.
+        </p>
+
+    </div>
+
+
+    <div class="experience">
+
+
+        <div class="experience-card experience-1">
+
+            <div class="experience-content">
+
+                <h3>
+                    Nature & Walks
+                </h3>
+
+                <p>
+                    Enjoy peaceful surroundings and explore the beauty
+                    of the region.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="experience-card experience-2">
+
+            <div class="experience-content">
+
+                <h3>
+                    Day Spa
+                </h3>
+
+                <p>
+                    Relax with massage and wellness treatments.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="experience-card experience-3">
+
+            <div class="experience-content">
+
+                <h3>
+                    Romantic Escape
+                </h3>
+
+                <p>
+                    Create memorable moments with someone special.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WEBSITE OFFER
+========================= -->
+
+<section class="website-offer">
+
+    <div class="offer-grid">
+
+
+        <div>
+
+            <div class="offer-label">
+                LOVE THIS WEBSITE?
+            </div>
+
+            <h2 class="offer-title">
+                We Can Build A Similar
+                <span>Or Even Better</span>
+                Website For You.
+            </h2>
+
+            <p class="offer-text">
+                This is only a sample website. Your actual website can
+                be completely customised with your own business name,
+                logo, colours, services, products, photos, booking
+                system, enquiry forms, location, social media and
+                custom domain such as
+                <strong>yourbusiness.com.au</strong>.
+            </p>
+
+
+            <div class="benefits">
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">🌐</div>
+
+                    <h3>
+                        Your Own Domain
+                    </h3>
+
+                    <p>
+                        Build your brand around your own professional
+                        web address.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">🛡️</div>
+
+                    <h3>
+                        Brand Protection
+                    </h3>
+
+                    <p>
+                        Establish a professional online identity
+                        around your business name.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">⏰</div>
+
+                    <h3>
+                        24/7 Availability
+                    </h3>
+
+                    <p>
+                        Customers can discover your business anytime,
+                        even outside business hours.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">📅</div>
+
+                    <h3>
+                        Booking Management
+                    </h3>
+
+                    <p>
+                        Add booking, enquiry, appointment or reservation
+                        features as required.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">🔎</div>
+
+                    <h3>
+                        Organic Traffic
+                    </h3>
+
+                    <p>
+                        A search-friendly website can help people
+                        discover your business online.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">📈</div>
+
+                    <h3>
+                        Grow Awareness
+                    </h3>
+
+                    <p>
+                        Promote your services, products, offers,
+                        location and brand in one place.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">⭐</div>
+
+                    <h3>
+                        Build Credibility
+                    </h3>
+
+                    <p>
+                        A professional website gives customers
+                        another reason to trust your business.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">📱</div>
+
+                    <h3>
+                        Mobile Friendly
+                    </h3>
+
+                    <p>
+                        Your website can be designed to work beautifully
+                        on phones, tablets and computers.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">💬</div>
+
+                    <h3>
+                        More Enquiries
+                    </h3>
+
+                    <p>
+                        Give customers direct ways to call, WhatsApp,
+                        email, book or enquire.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="price-box">
+
+            <div class="price-small">
+                SAMPLE WEBSITE PACKAGE
+            </div>
+
+            <div class="price">
+                A$299
+                <span>/ first year</span>
+            </div>
+
+            <div class="renewal">
+                RENEWAL 60% OFF
+            </div>
+
+            <p>
+                Single-page professional website package.
+                Perfect for businesses, professionals, agencies,
+                offices, consultants, trades and service providers.
+            </p>
+
+            <p>
+                Your actual package can be customised according to
+                your business requirements.
+            </p>
+
+            <a
+            href="https://technizen.com.au/"
+            target="_blank"
+            class="price-button">
+
+                CONTACT TECHNIZEN →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECOND SALES MESSAGE
+========================= -->
+
+<div class="promo">
 
     <div>
 
         <h2>
-            Have an idea?
-            Let's build it.
+            Loved this template?
         </h2>
 
         <p>
-            Tell us about your project and let's create
-            something meaningful together.
+            We can create a similar website — or build something
+            completely different and even better for your business,
+            with your own branding, content, features and custom
+            domain such as <strong>yourbusiness.com.au</strong>.
         </p>
 
     </div>
 
-    <a href="#contact" class="white-button">
-        Start a Project →
+    <a
+    href="https://technizen.com.au/"
+    target="_blank"
+    class="promo-button">
+
+        CONTACT US →
+
     </a>
+
+</div>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section" id="gallery">
+
+    <div class="center">
+
+        <div class="section-label">
+            GALLERY
+        </div>
+
+        <h2 class="section-title">
+            Show Your Business
+            <span>Beautifully</span>
+        </h2>
+
+        <p class="section-text">
+            High-quality images help customers understand the
+            experience before they contact or book.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+        alt="Nature">
+
+        <img
+        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85"
+        alt="Accommodation">
+
+        <img
+        src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=85"
+        alt="Spa">
+
+        <img
+        src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=900&q=85"
+        alt="Relaxation">
+
+        <img
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
+        alt="Travel">
+
+    </div>
 
 </section>
 
 
+<!-- =========================
+     REVIEWS
+========================= -->
 
-<!-- ================= CONTACT ================= -->
+<section class="section testimonials" id="reviews">
+
+    <div class="center">
+
+        <div class="section-label">
+            CUSTOMER REVIEWS
+        </div>
+
+        <h2 class="section-title">
+            Let Your Customers
+            <span>Speak For You.</span>
+        </h2>
+
+        <p class="section-text">
+            Your real website can connect reviews and testimonials
+            to build trust with new customers.
+        </p>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “A peaceful place to relax and reconnect with nature.
+                A beautiful experience from start to finish.”
+            </p>
+
+            <strong>
+                — Sample Customer
+            </strong>
+
+        </div>
+
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Wonderful accommodation, beautiful surroundings and
+                a relaxing experience.”
+            </p>
+
+            <strong>
+                — Sample Guest
+            </strong>
+
+        </div>
+
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “The perfect place for a peaceful getaway. We would
+                happily come back again.”
+            </p>
+
+            <strong>
+                — Sample Visitor
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="section">
+
+    <div class="location">
+
+
+        <div class="location-box">
+
+            <div class="section-label">
+                FIND US
+            </div>
+
+            <h3>
+                Come & Experience It
+            </h3>
+
+            <div class="location-row">
+                📍
+                <span>
+                    12028 Kennedy Hwy,<br>
+                    Ravenshoe QLD 4888, Australia
+                </span>
+            </div>
+
+            <div class="location-row">
+                📞
+                <span>
+                    +61 413 216 613
+                </span>
+            </div>
+
+            <div class="location-row">
+                ✉️
+                <span>
+                    chilvertoncottages2023@outlook.com
+                </span>
+            </div>
+
+            <br>
+
+            <a
+            href="https://www.google.com/maps/place/Chilverton+Cottages+%26+Day+Spa/@-17.5192617,145.5279875,13z"
+            target="_blank"
+            class="btn btn-primary">
+
+                GET DIRECTIONS →
+
+            </a>
+
+        </div>
+
+
+        <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Chilverton+Cottages+%26+Day+Spa,+12028+Kennedy+Hwy,+Ravenshoe+QLD+4888&output=embed"
+        loading="lazy">
+        </iframe>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section contact" id="contact">
 
-    <div class="section-heading center">
-
-        <div class="section-label">
-            CONTACT
-        </div>
-
-        <h2>
-            Let's Start
-            <span>Something Great.</span>
-        </h2>
-
-        <p>
-            Have a project in mind? Get in touch with us.
-        </p>
-
-    </div>
+    <div class="contact-grid">
 
 
-    <div class="contact-box">
+        <div>
 
-        <div class="contact-details">
+            <div class="section-label">
+                CONTACT
+            </div>
 
-            <h3>Get In Touch</h3>
+            <h2 class="section-title">
+                Let's Make Your
+                <span>Next Visit Special.</span>
+            </h2>
 
-            <p>
-                📧 info@technizen.in
+            <p class="section-text">
+                Have a question, want to check availability or
+                looking for a special package? Send us an enquiry.
             </p>
 
-            <p>
-                📞 +91 XXXXX XXXXX
-            </p>
 
-            <p>
-                📍 India
-            </p>
+            <div class="contact-details">
 
-            <p>
-                We'd love to hear about your next project.
-            </p>
+                <div class="contact-row">
+                    📞 +61 413 216 613
+                </div>
+
+                <div class="contact-row">
+                    ✉️ chilvertoncottages2023@outlook.com
+                </div>
+
+                <div class="contact-row">
+                    📍 12028 Kennedy Hwy, Ravenshoe QLD 4888
+                </div>
+
+            </div>
 
         </div>
 
 
-        <form>
+        <div class="contact-form">
 
-            <input
+            <form>
+
+                <input
                 type="text"
-                placeholder="Your Name">
+                placeholder="Your Name"
+                required>
 
-            <input
+                <input
                 type="email"
-                placeholder="Your Email">
+                placeholder="Your Email"
+                required>
 
-            <input
+                <input
+                type="tel"
+                placeholder="Phone Number">
+
+                <input
                 type="text"
-                placeholder="Subject">
+                placeholder="Preferred Dates">
 
-            <textarea
+                <textarea
                 rows="5"
-                placeholder="Tell us about your project">
-            </textarea>
+                placeholder="Tell us how we can help"></textarea>
 
-            <button type="submit">
-                Send Message →
-            </button>
+                <button type="submit">
+                    SEND ENQUIRY →
 
-        </form>
+                </button>
+
+            </form>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
     <div class="footer-top">
 
+
         <div>
 
             <div class="footer-logo">
-                <span>TECH</span>IZEN
+                Chilverton Cottages & Day Spa
             </div>
 
             <p>
-                Digital solutions for modern businesses.
+                Accommodation · Relaxation · Nature · Wellness
             </p>
 
         </div>
@@ -1363,25 +2256,55 @@
 
             <a href="#home">Home</a>
 
-            <a href="#services">Services</a>
-
             <a href="#about">About</a>
 
-            <a href="#work">Work</a>
+            <a href="#stay">Stay</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#gallery">Gallery</a>
 
             <a href="#contact">Contact</a>
 
         </div>
 
+
     </div>
 
 
-    <p class="copyright">
-        © 2026 Technizen Solutions. All Rights Reserved.
-    </p>
+    <div class="footer-bottom">
+
+        This sample website was developed by
+        <a href="https://technizen.in/">Technizen Solutions</a>.
+
+        <br><br>
+
+        Want a website like this for your business?
+        Contact Technizen Solutions.
+
+        <br><br>
+
+        © 2026 Chilverton Cottages & Day Spa · Sample Website Concept
+
+    </div>
 
 </footer>
 
 
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/61342361236"
+target="_blank"
+class="whatsapp">
+
+    💬 WhatsApp Us
+
+</a>
+
+
 </body>
+
 </html>
